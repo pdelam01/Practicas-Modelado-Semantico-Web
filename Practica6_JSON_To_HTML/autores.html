@@ -1,0 +1,126 @@
+
+<html>
+
+    <script language="javascript">
+    
+    var jsObject = {
+                    "libros": {
+                        "libro": [
+                        {
+                            "-isbn": "X223344",
+                            "titulo": "El desierto de los Tartaros",
+                            "autores": {
+                            "autor": [{
+                                "-idAutor": "Y998877",
+                                "nombre": "Dino",
+                                "primerApellido": "Buzzati",
+                                "segundoApellido": "Traverso"
+                            }]
+                            },
+                            "editorial": {
+                                "-idEditorial": "A1212",
+                                "nombre": "Alianza"
+                                },
+                            "precio": "25"
+                        },
+                        {
+                            "-isbn": "X556677",
+                            "titulo": "Programar en Java",
+                            "autores": {
+                                "autor": [
+                                    {
+                                    "-idAutor": "M663355",
+                                    "nombre": "Jose",
+                                    "primerApellido": "Fernandez",
+                                    "segundoApellido": "García"
+                                    },
+                                    {
+                                    "-idAutor": "U887766",
+                                    "nombre": "Maria",
+                                    "primerApellido": "Gutierrez",
+                                    "segundoApellido": "Cano",
+                                    "tituloNobiliario": {
+                                        "titulo": "Conde",
+                                        "fecha": "25/12/2001"
+                                    }
+                                    }
+                                ]
+                            },
+                            "editorial": {
+                                "-idEditorial": "A5656",
+                                "nombre": "Alianza"
+                            },
+                            "precio": "30"
+                        }
+                        ]
+                    }
+                };
+
+    /*
+
+    //Parte del código muestra info por alertas
+    var i;
+    var j;
+    var cad;
+    
+    for (i=0; i<jsObject.libros.libro.length; i++)
+    {
+    cad = jsObject.libros.libro[i].titulo + " escrito por " 
+    for (j=0; j<jsObject.libros.libro[i].autores.autor.length; j++)
+    {
+    cad = cad + jsObject.libros.libro[i].autores.autor[j].nombre + ", ";
+    };
+    alert (cad);
+    };
+    
+    */
+    
+    </script>
+    
+    <body>
+    Página muestra info de los libros y autores.
+
+    <p id = "objeto" style = "font-size: 15px; font-weight: bold;"> 
+    </p>
+    
+    <script>
+        var nombreAutores;
+        var tituloNob;
+        for (let i=0; i<jsObject.libros.libro.length; i++){
+            nombreAutores = ""
+            tituloNob=""
+            for (let j = 0; j < jsObject.libros.libro[i].autores.autor.length; j++) {
+                if (j<jsObject.libros.libro[i].autores.autor.length-1) {
+                    nombreAutores += jsObject.libros.libro[i].autores.autor[j].nombre+" "+
+                    jsObject.libros.libro[i].autores.autor[j].primerApellido +" "+ 
+                    jsObject.libros.libro[i].autores.autor[j].segundoApellido+", "
+                } else {
+                    nombreAutores += jsObject.libros.libro[i].autores.autor[j].nombre+" "+
+                    jsObject.libros.libro[i].autores.autor[j].primerApellido +" "+ 
+                    jsObject.libros.libro[i].autores.autor[j].segundoApellido
+                }
+                
+                if (jsObject.libros.libro[i].autores.autor[j].tituloNobiliario != undefined) {
+                    tituloNob += jsObject.libros.libro[i].autores.autor[j].tituloNobiliario.titulo
+                }else{
+                    tituloNob += "Sin titulo nobiliario | "
+                }
+                
+                
+                    
+            }
+
+            document.getElementById("objeto").innerHTML += "<br>" + 
+                    "Titulo: " + jsObject.libros.libro[i].titulo +", con ISBN: "+jsObject.libros.libro[i]["-isbn"] +"<br>" +
+                    "Autor/es: " + nombreAutores + "<br>" +
+                    "Titulo nobiliario: " + tituloNob + "<br>" +
+                    "Editorial: " + jsObject.libros.libro[i].editorial.nombre + "<br>" +
+                    "Precio: " + jsObject.libros.libro[i].precio +"€ <br>"
+                              
+        }
+
+    </script>
+
+    </body>
+    
+    </html>
