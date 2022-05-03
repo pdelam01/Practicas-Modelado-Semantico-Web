@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciudades>
+ <ciudad>
+ <nombre>
+ León
+ </nombre>
+ <habitantes>
+ 150000
+ </habitantes>
+ <descripcion>
+ León una ciudad del Camino de Santiago, ciudad de peregrinos y caminantes, de turistas y viajeros.
+Es una ciudad de paso hacia el noroeste peninsular.
+ </descripcion>
+ <barrio>
+ Crucero
+ </barrio>
+ <barrio>
+ San Mamés
+ </barrio>
+ <barrio>
+ Húmedo
+ </barrio>
+ </ciudad>
+ <ciudad>
+ <nombre>
+ Toledo
+ </nombre>
+ <habitantes>
+ 120000
+ </habitantes>
+ <descripcion>
+ Toledo es una de las ciudades que quizás resume de forma más perfecta los elementos fundamentales de
+la historia española.
+ </descripcion>
+ <barrio>
+ Judío
+ </barrio>
+ <barrio>
+ Cigarrales
+ </barrio>
+ <barrio>
+ Buena Vista
+ </barrio>
+ </ciudad>
+ <ciudad>
+ <nombre>
+ Madrid
+ </nombre>
+ <habitantes>
+ 2000000
+ </habitantes>
+ <descripcion>
+ Madrid es la capital de España y de la Comunidad de Madrid, en la que se configuró la antigua
+Provincia de Madrid. Es conocida habitualmente como Villa y Corte.
+ </descripcion>
+ <barrio>
+ Lavapiés
+ </barrio>
+ <barrio>
+ Aluche
+ </barrio>
+ <barrio>
+ Vallecas
+ </barrio>
+ </ciudad>
+</ciudades>

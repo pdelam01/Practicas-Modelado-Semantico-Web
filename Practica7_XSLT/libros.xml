@@ -1,0 +1,36 @@
+<libros>
+    <libro isbn="X9884">
+        <titulo>Ensayo sobre la ceguera</titulo>
+        <autores>
+            <autor idAutor="JS3344">
+                <nombre>José</nombre>
+                <primerApellido>Saramago</primerApellido>
+                <segundoApellido>González</segundoApellido>
+            </autor>
+        </autores>
+        <editorial idEditorial="P001">
+            <nombre>Planeta</nombre>
+        </editorial>
+        <rutaImagen>ensayo_ceguera.jpg</rutaImagen>
+    </libro>
+
+    <libro isbn="X4558">
+        <titulo>Head First Java</titulo>
+        <autores>
+            <autor idAutor="KS5566">
+                <nombre>Kathy</nombre>
+                <primerApellido>Sierra</primerApellido>
+                <segundoApellido>Sierra</segundoApellido>
+            </autor>
+            <autor idAutor="BB7733">
+                <nombre>Bert</nombre>
+                <primerApellido>Bates</primerApellido>
+                <segundoApellido>Bates</segundoApellido>
+            </autor>
+        </autores>
+        <editorial idEditorial="SP03">
+            <nombre>Springer</nombre>
+        </editorial>
+        <rutaImagen>head_first_java.jpg</rutaImagen>
+    </libro>
+</libros>

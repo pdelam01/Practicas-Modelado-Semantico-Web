@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciudades>
+ <ciudad nombre="León">
+ <descripcion>
+ León una ciudad del Camino de Santiago, ciudad de peregrinos y caminantes, de
+turistas y viajeros. Es una ciudad de paso hacia el noroeste peninsular.
+ </descripcion>
+ </ciudad>
+ <ciudad nombre="Toledo">
+ <descripcion>
+ Toledo es una de las ciudades que quizás resume de forma más perfecta los
+elementos fundamentales de la historia española.
+ </descripcion>
+ </ciudad>
+ <ciudad nombre="Madrid">
+ <descripcion>
+ Madrid es la capital de España y de la Comunidad de Madrid, en la que se
+configuró la antigua Provincia de Madrid. Es conocida habitualmente como Villa y Corte.
+ </descripcion>
+ </ciudad>
+</ciudades>

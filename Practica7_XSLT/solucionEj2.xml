@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pedido>
+  <libro>
+    <titulo isbn="X9884">Ensayo sobre la ceguera</titulo>
+    <autor>
+      <nombreCompleto>JoséSaramagoGonzález</nombreCompleto>
+      <idAutor>JS3344</idAutor>
+    </autor>
+    <editorial idEditorial="P001">
+      <nombreEd>Planeta</nombreEd>
+    </editorial>
+  </libro>
+  <libro>
+    <titulo isbn="X4558">Head First Java</titulo>
+    <autor>
+      <nombreCompleto>KathySierraSierra</nombreCompleto>
+      <idAutor>KS5566</idAutor>
+      <nombreCompleto>BertBatesBates</nombreCompleto>
+      <idAutor>BB7733</idAutor>
+    </autor>
+    <editorial idEditorial="SP03">
+      <nombreEd>Springer</nombreEd>
+    </editorial>
+  </libro>
+</pedido>
