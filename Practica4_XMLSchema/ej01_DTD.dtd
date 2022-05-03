@@ -1,0 +1,19 @@
+<!ELEMENT personas(persona*)>
+<!ELEMENT persona(nombre, apellido, telefono,direccion,profesion*,img)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT direccion ((calle,numero)|(longitud,latitud))>
+<!ELEMENT profesion (#PCDATA)>
+<!ELEMENT img EMPTY>
+
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT latitutd (#PCDATA)>
+<!ELEMENT longitud (#PCDATA)>
+
+<!ATTLIST telefono tipo (casa|movil|trabajo) "movil">
+<!ATTLIST persona edad CDATA #REQUIRED>
+<!ATTLIST personas xmlns CDATA #REQUIRED>
+<!ATTLIST img src CDATA #REQUIRED alt CDATA #REQUIRED>

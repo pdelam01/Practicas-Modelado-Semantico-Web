@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:target="http://unileon.es/personas" 
+           targetNamespace="http://unileon.es/personas" elementFormDefault="qualified">
+
+    <simpleType name="tipoCarnet">
+        <restriction base="string">
+            <enumeration value="A"/>
+            <enumeration value="A2"/>
+            <enumeration value="B"/>
+            <enumeration value="C"/>
+            <enumeration value="C1"/>
+        </restriction>
+    </simpleType>
+
+    <xs:element name="personas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="apellido" type="xs:string"/>
+                            <xs:element name="edad" type="xs:integer">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="18"/>
+                                        <xs:maxInclusive value="100"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="carnet">
+                                <xs:complexType>  
+                                    <xs:simpleContent>
+                                        <xs:extension base="target:tipoCarnet">
+                                           <xs:attribute name="desde">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:integer">
+                                                        <xs:minInclusive value="1950"/>
+                                                        <xs:maxInclusive value="2022"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                            <xs:attribute name="sexo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <enumeration value="hombre"/>
+                                        <enumeration value="mujer"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

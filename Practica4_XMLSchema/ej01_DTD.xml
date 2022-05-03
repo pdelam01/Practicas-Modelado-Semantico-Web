@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE personas SYSTEM "ej01_DTD.dtd">
+<personas xmlns="http://torio.unileon.es/~dieigr/personas">
+	<persona edad="21">
+		<nombre>juan</nombre>
+		<apellido>lópez</apellido>
+		<telefono tipo="movil">666888999</telefono>
+		<direccion>
+			<calle>pez</calle>
+			<numero>3</numero>
+		</direccion>
+	<profesion>carpintero</profesion>
+    <profesion>dentista</profesion>
+    <profesion>piloto F1</profesion>
+    <img src="URL1" alt="imagen de pepe"/>
+  </persona>
+  <persona edad="21">
+		<nombre>eva</nombre>
+		<apellido>garcia</apellido>
+		<telefono tipo="casa">555888999</telefono>		
+    <direccion>
+			<latitud>3.5</latitud>
+			<longitud>42.8</longitud>
+		</direccion>
+    <img src="URL2" alt="imagen de eva"/>
+  </persona>
+</personas>

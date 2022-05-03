@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<personas xmlns="http://unileon.es/personas" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://unileon.es/personas XMLSchema_Personas.xsd">
+
+    <persona sexo="hombre">
+        <nombre>juan</nombre>
+        <apellido>lópez</apellido>
+        <edad>20</edad>
+        <carnet desde="1990">C1</carnet>
+    </persona>
+    
+    <persona sexo="mujer">
+        <nombre>carmen</nombre>
+        <apellido>garcia</apellido>
+        <edad>25</edad>
+        <carnet desde="2001">A</carnet>
+    </persona>
+</personas>

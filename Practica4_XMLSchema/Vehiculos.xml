@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<vehiculos xmlns="http://unileon.es/vehiculos"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://unileon.es/vehiculos XMLSchema_Vehiculos.xsd">
+  <vehiculo tipo="coche">
+    <color>rojo</color>
+    <marca>Renault</marca>
+    <potencia medida="cv">130</potencia>
+  </vehiculo>
+  <vehiculo tipo="camion">
+    <color>blanco</color>
+    <marca>Scania</marca>
+    <potencia medida="cv">400</potencia>
+  </vehiculo>
+</vehiculos>
