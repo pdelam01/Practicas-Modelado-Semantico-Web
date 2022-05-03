@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+  <libro isbn="X223344">
+    <titulo>El desierto de los Tártaros</titulo>
+    <autores>
+      <autor idAutor="Y998877">
+          <nombre>Dino</nombre>
+          <primerApellido>Buzzati</primerApellido>
+          <segundoApellido>Traverso</segundoApellido>
+      </autor>
+    </autores>
+    <editorial idEditorial="A1212">
+      <nombre>Alianza</nombre>
+    </editorial>
+	<precio>25</precio>
+  </libro>
+  <libro isbn="X556677">
+    <titulo>Programar en Java</titulo>
+    <autores>
+      <autor idAutor="M663355">
+          <nombre>Jose</nombre>
+          <primerApellido>Fernandez</primerApellido>
+          <segundoApellido>Garcia</segundoApellido>
+      </autor>
+      <autor idAutor="U887766">
+          <nombre>Maria</nombre>
+          <primerApellido>Gutierrez</primerApellido>
+          <segundoApellido>Cano</segundoApellido>
+          <tituloNobiliario>
+            <titulo>Conde</titulo>
+            <fecha>25/12/2001</fecha>
+          </tituloNobiliario>
+      </autor>
+    </autores>
+    <editorial idEditorial="A5656">
+      <nombre>Alianza</nombre>
+    </editorial>
+	<precio>30</precio>
+  </libro>
+</libros>

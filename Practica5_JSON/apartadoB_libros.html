@@ -1,0 +1,69 @@
+<html>
+<script language="javascript">
+var jsObject = {
+    "libros": {
+        "libro": [
+            {
+                "titulo":"El desierto de los Tártaros",
+                "autores":{
+                    "autor":[
+                        {
+                            "nombre":"Dino",
+                            "primerApellido":"Buzzati",
+                            "segundoApellido":"Traverso",
+                            "@idAutor":"Y998877"
+                        }
+                    ]
+                },
+                "editorial":{
+                    "nombre":"Alianza",
+                    "@idEditorial":"A1212"
+                },
+                "precio":25,
+                "@isbn":"X223344"
+            },
+            {
+                "titulo":"Programar en Java",
+                "autores":{
+                    "autor":[
+                        {
+                            "nombre":"Jose",
+                            "primerApellido":"Fernández",
+                            "segundoApellido":"García",
+                            "@idAutor":"M663355"
+                        },
+                        {
+                            "nombre":"María",
+                            "primerApellido":"Gutierrez",
+                            "segundoApellido":"Cano",
+                            "tituloNobiliario":{
+                                "titulo":"Conde",
+                                "fecha":"25/12/2001"
+                            },
+                            "@idAutor":"U887766"
+                        }
+                    ]
+                },
+                "editorial":{
+                    "nombre":"Alianza",
+                    "@idEditorial":"A5656"
+                },
+                "precio":30,
+                "@isbn":"X556677"
+            }
+        ]
+    }
+};
+
+
+for (let i = 0; i < jsObject.libros.libro.length; i++) {
+    alert("El libro "+jsObject.libros.libro[i].titulo+" tiene un precio de "+jsObject.libros.libro[i].precio+" euros.");   
+}
+
+
+</script>
+
+<body>
+Página muestra precios de libros
+</body>
+</html>

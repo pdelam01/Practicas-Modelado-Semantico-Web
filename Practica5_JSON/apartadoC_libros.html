@@ -1,0 +1,96 @@
+<html>
+<script language="javascript">
+var jsObject = {
+    "libros": {
+        "libro": [
+            {
+                "titulo":"El desierto de los Tártaros",
+                "autores":{
+                    "autor":[
+                        {
+                            "nombre":"Dino",
+                            "primerApellido":"Buzzati",
+                            "segundoApellido":"Traverso",
+                            "@idAutor":"Y998877"
+                        }
+                    ]
+                },
+                "editorial":{
+                    "nombre":"Alianza",
+                    "@idEditorial":"A1212"
+                },
+                "precio":25,
+                "@isbn":"X223344"
+            },
+            {
+                "titulo":"Programar en Java",
+                "autores":{
+                    "autor":[
+                        {
+                            "nombre":"Jose",
+                            "primerApellido":"Fernández",
+                            "segundoApellido":"García",
+                            "@idAutor":"M663355"
+                        },
+                        {
+                            "nombre":"María",
+                            "primerApellido":"Gutierrez",
+                            "segundoApellido":"Cano",
+                            "tituloNobiliario":{
+                                "titulo":"Conde",
+                                "fecha":"25/12/2001"
+                            },
+                            "@idAutor":"U887766"
+                        }
+                    ]
+                },
+                "editorial":{
+                    "nombre":"Alianza",
+                    "@idEditorial":"A5656"
+                },
+                "precio":30,
+                "@isbn":"X556677"
+            }
+        ]
+    }
+};
+
+
+for (let i = 0; i < jsObject.libros.libro.length; i++) {
+    if (jsObject.libros.libro[i].autores.autor.length>1) {
+        for (let j = 0; j < jsObject.libros.libro[i].autores.autor.length; j++) {
+            alert("El libro "+jsObject.libros.libro[i].titulo+" fue escrito por "+(jsObject.libros.libro[i].autores.autor[j].nombre).toString().concat(", ").concat(jsObject.libros.libro[i].autores.autor[j+1].nombre)+".");  
+        }
+    }else{
+        alert("El libro "+jsObject.libros.libro[i].titulo+" fue escrito por "+jsObject.libros.libro[i].autores.autor[i].nombre+".");   
+    }
+}
+/*
+
+for (let i = 0; i < jsObject.libros.libro.length; i++) {
+    if (jsObject.libros.libro[i].autores.autor.length>1) {
+        alert("El libro "+jsObject.libros.libro[i].titulo+" fue escrito por "+ name() +".");  
+    }else{
+        alert("El libro "+jsObject.libros.libro[i].titulo+" fue escrito por "+jsObject.libros.libro[i].autores.autor[i].nombre+".");   
+    }
+}
+
+function name() {
+    var nombres;
+    for (let i = 0; i < jsObject.libros.libro.length; i++) {
+        if (jsObject.libros.libro[i].autores.autor.length>1) {
+            for (let j = 0; j < jsObject.libros.libro[i].autores.autor.length; j++) {
+                nombres = (jsObject.libros.libro[i].autores.autor[j].nombre).toString().concat(", ").concat(nombres);
+                console.log(nombres)
+            }
+        }
+    }
+    return nombres;
+}*/
+
+</script>
+
+<body>
+Página muestra autores de libros
+</body>
+</html>
