@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<libros>
+	<libro>
+		<titulo>
+			Aprenda Java como si estuviese en primero
+		</titulo>
+		<autores>
+			<autor idAutor="a01"/>
+			<autor idAutor="a06"/>
+			<autor idAutor="a11"/>
+		</autores>
+	</libro>
+	<libro>
+		<titulo>
+			La pesca del cangrejo de río en Siberia
+		</titulo>
+		<autores>
+			<autor idAutor="a09"/>
+			<autor idAutor="a11"/>
+		</autores>
+	</libro>
+	<libro>
+		<titulo>
+			Historia de la Universidad de León
+		</titulo>
+		<autores>
+			<autor idAutor="a06"/>
+			<autor idAutor="a24"/>
+		</autores>
+	</libro>
+</libros>

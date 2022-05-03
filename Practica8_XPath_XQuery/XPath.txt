@@ -1,0 +1,116 @@
+================================ ejer1: Sacar todos los nodos autores y crear un documento XML bien formado
+<autores>
+{
+let $autores := doc("autores.xml")/autores/autor
+for $autor in $autores
+return
+$autor
+}
+</autores>
+
+o
+
+<autores> { doc("autores.xml")/autores/autor } </autores>
+
+=============================== ejer2: Saca un autor con id igual a “a24”
+<autores> { doc("autores.xml")/autores/autor[@id="a24"] } </autores>
+
+============================== ejer3: Saca un autor con nombre Carmen
+<autores> { doc("autores.xml")/autores/autor[nombre="Carmen"] } </autores>
+
+============================== ejer4: Saca el último autor del listado
+<autores> { doc("autores.xml")/autores/autor[last()] } </autores>
+
+============================== ejer5: Saca cuantos autores hay
+<datos>{
+	let $autores := doc("autores.xml")/autores/autor
+	return <dato> {concat("Hay ", count($autores), " autores")} </dato>
+}</datos>
+
+============================== ejer6: Saca el autor que está en la posición 2 en el listado
+<autores> { doc("autores.xml")/autores/autor[2] } </autores>
+
+============================== ejer7: Saca todos los autores argentinos (where)
+<autores>{
+	let $autores := doc("autores.xml")/autores/autor
+	for $autor in $autores
+		where $autor/nacionalidad="Argentina"
+			return $autor
+}</autores>
+
+============================= ejer8: Saca el autor con identificador a24 usando el where
+<autores>{
+	let $autores := doc("autores.xml")/autores/autor
+	for $autor in $autores
+		where $autor/@id="a24"
+			return $autor
+}</autores>
+
+============================= ejer9: Saca de la siguiente manera el nombre de todos los autores españoles:
+<autores>{
+	let $autores := doc("autores.xml")/autores/autor
+	for $autor in $autores
+		where $autor/nacionalidad="Española"
+			return <dato> {concat("El autor ", $autor/nombre/text(), " es español")} </dato>
+}</autores>
+
+============================ ejer10: Sacar los autores, indicando, para cada uno, los libros que ha escrito
+<autores>{
+	let $autores := doc("autores.xml")/autores/autor
+	let $libros := doc("libros.xml")/libros/libro
+	for $autor in $autores
+		return 
+				<autor>{
+					element nombreAutor {$autor/nombre/text()},
+					for $libro in $libros
+						where $autor/@id=$libro/autores/autor/@idAutor
+							return element libro {$libro/titulo/text()}
+				}</autor>
+}</autores>
+//Si fuese sin element, habría que poner {for ... /text()} }
+
+============================ ejer11: 
+<datos>{
+	let $autores := doc("autores.xml")/autores/autor
+  let $libros := doc("libros.xml")/libros/libro
+  for $libro in $libros
+  	return 
+    	<dato>{
+      	concat("El libro ", $libro/titulo/text(), " lo han escrito ")}
+        {for $autor in $autores
+        	where $autor/@id = $libro/autores/autor/@idAutor
+          	return concat($autor/nombre/text(),$autor/apellido/text())}
+       </dato>
+}</datos>
+
+
+======================== Child
+<datos>{
+	let $autores := doc("autores.xml")/autores/autor
+  let $libros := doc("libros.xml")/libros/libro
+  for $libro in $libros
+  	return 
+    	<dato>{
+      	$libro/child::titulo/text()
+       }</dato>
+}</datos>
+
+====================== Ancestor
+<datos>{
+  let $autores := doc("libros.xml")/libros/libro/autores/autor[@idAutor="a06"]
+  for $autor in $autores
+  	return 
+    	<dato> //el ancestor, podemos subir hasta donde queramos
+      	El autor {$autor/@idAutor/string()} ha escrito {$autor/ancestor::autores/ancestor::libro/titulo/text()}
+       </dato>
+}</datos>
+
+==================== Following
+<datos>{
+  let $libros := doc("libros.xml")/libros/libro
+  for $libro in $libros
+  	return 
+    	<dato>
+      	{$libro/following::*}
+       </dato>
+}</datos>

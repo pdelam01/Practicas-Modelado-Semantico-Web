@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<autores>
+	<autor id="a01">
+		<nombre>Pedro</nombre>
+		<apellido>García</apellido>
+		<nacionalidad>Española</nacionalidad>
+	</autor>
+	<autor id="a06">
+		<nombre>Luis</nombre>
+		<apellido>González</apellido>
+		<nacionalidad>Argentina</nacionalidad>
+	</autor>
+	<autor id="a09">
+		<nombre>María</nombre>
+		<apellido>Sánchez</apellido>
+		<nacionalidad>Española</nacionalidad>
+	</autor>
+	<autor id="a11">
+		<nombre>Carmen</nombre>
+		<apellido>Rodríguez</apellido>
+		<nacionalidad>Argentina</nacionalidad>
+	</autor>
+	<autor id="a24">
+		<nombre>Julian</nombre>
+		<apellido>García</apellido>
+		<nacionalidad>Española</nacionalidad>
+	</autor>
+</autores>
